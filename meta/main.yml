@@ -1,5 +1,6 @@
 ---
-dependencies: []
+dependencies:
+- { role: victorock.freeipa-client }
 
 galaxy_info:
   author: victorock
