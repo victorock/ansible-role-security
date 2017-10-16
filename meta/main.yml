@@ -16,15 +16,22 @@ dependencies:
 # Uncoment when freeipa-client module is ready
   #- role: victorock.freeipa-client
   - role: victorock.rhel7-stig
-# Audit doesn't hurts...
+# System secured since the beggining is a system always secured
     rhel7stig_cat1_audit: yes
     rhel7stig_cat2_audit: yes
     rhel7stig_cat3_audit: yes
-    rhel7stig_cat1_patch: no
-    rhel7stig_cat2_patch: no
-    rhel7stig_cat3_patch: no
+    rhel7stig_cat1_patch: yes
+    rhel7stig_cat2_patch: yes
+    rhel7stig_cat3_patch: yes
 
   - role: victorock.rhel7-cis
+# System secured since the beggining is a system always secured
+    rhel7cis_section1: yes
+    rhel7cis_section2: yes
+    rhel7cis_section3: yes
+    rhel7cis_section4: yes
+    rhel7cis_section5: yes
+    rhel7cis_section6: yes
 # Change to yes when Freeipa-client module is operational
     rhel7cis_openldap_clients_required: no
     rhel7cis_ypbind_required: no
