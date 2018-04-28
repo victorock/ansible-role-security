@@ -1,41 +1,18 @@
 ---
 galaxy_info:
-  author: victorock
+  author: Victor da Costa
   description: Baseline Security - Linux
-  license: "license (BSD, MIT)"
-  min_ansible_version: 2.0
+  license: GPLv3
+  min_ansible_version: 2.4
   platforms:
   - name: EL
     versions:
-    - 6
     - 7
   galaxy_tags:
     - general
 
 dependencies:
-# Uncoment when freeipa-client module is ready
-  #- role: victorock.freeipa-client
-  - role: victorock.rhel7-stig
-# System secured since the beggining is a system always secured
-    rhel7stig_cat1_audit: yes
-    rhel7stig_cat2_audit: yes
-    rhel7stig_cat3_audit: yes
-    rhel7stig_cat1_patch: yes
-    rhel7stig_cat2_patch: yes
-    rhel7stig_cat3_patch: yes
-
-  - role: victorock.rhel7-cis
-# System secured since the beggining is a system always secured
-    rhel7cis_section1: yes
-    rhel7cis_section2: yes
-    rhel7cis_section3: yes
-    rhel7cis_section4: yes
-    rhel7cis_section5: yes
-    rhel7cis_section6: yes
-# Change to yes when Freeipa-client module is operational
-    rhel7cis_openldap_clients_required: no
-    rhel7cis_ypbind_required: no
-# Euuuhhhnnn i know, i know...but..
-# we are accessing through the cloud with no jumpbox...
-    rhel7cis_host_allow:
-      - "0.0.0.0/0"
+  # Using my own because the main.yml is empty
+  - role: victorock.RHEL7-STIG
+  # Using my own because the main.yml is empty
+  - role: victorock.RHEL7-CIS

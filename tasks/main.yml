@@ -1,2 +1,10 @@
 ---
-- import_tasks: sudo.yml
+- name: "victorock.RHEL7-STIG"
+  include_role:
+    name: victorock.RHEL7-STIG
+    tasks_from: run
+
+- name: "victorock.RHEL7-CIS"
+  include_role:
+    name: victorock.RHEL7-CIS
+    tasks_from: run
