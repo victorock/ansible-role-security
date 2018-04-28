@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Victor da Costa
+  description: Baseline Security - Linux
+  license: GPLv3
+  min_ansible_version: 2.4
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  galaxy_tags:
+    - general
+
+dependencies:
+  # Using my own because the main.yml is empty
+  - role: victorock.RHEL7-STIG
+  # Using my own because the main.yml is empty
+  - role: victorock.RHEL7-CIS
