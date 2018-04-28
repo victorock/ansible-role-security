@@ -8,3 +8,8 @@
   include_role:
     name: victorock.RHEL7-CIS
     tasks_from: run
+
+- name: "victorock.chkrootkit"
+  include_role:
+    name: victorock.chkrootkit
+    tasks_from: run

@@ -17,3 +17,4 @@ dependencies:
   - role: victorock.RHEL7-STIG
   # Using my own because the main.yml is empty
   - role: victorock.RHEL7-CIS
+  - role: victorock.chkrootkit
