@@ -9,7 +9,8 @@ galaxy_info:
     versions:
     - 7
   galaxy_tags:
-    - general
+    - linux
+    - security
 
 dependencies:
   # Using my own because the main.yml is empty
