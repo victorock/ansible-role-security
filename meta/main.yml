@@ -13,8 +13,8 @@ galaxy_info:
     - security
 
 dependencies:
-  # Using my own because the main.yml is empty
+  # Forked to remove main.yml
   - role: victorock.RHEL7-STIG
-  # Using my own because the main.yml is empty
+  # Forked to remove main.yml
   - role: victorock.RHEL7-CIS
-  - role: victorock.chkrootkit
+  - role: victorock.rkhunter
